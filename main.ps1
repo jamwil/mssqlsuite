@@ -11,7 +11,7 @@ if ("sqlengine" -in $Install) {
       Write-Output "mac detected, installing docker then downloading a docker container"
       mkdir -p ~/.docker/machine/cache
       curl -Lo ~/.docker/machine/cache/boot2docker.iso https://github.com/boot2docker/boot2docker/releases/download/v19.03.12/boot2docker.iso
-      brew install virtualbox
+      brew install --cask virtualbox
       brew install docker docker-machine
       docker-machine create --driver virtualbox --virtualbox-memory 3072 default
       docker-machine env default
